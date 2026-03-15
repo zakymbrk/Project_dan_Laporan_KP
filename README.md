@@ -4,27 +4,6 @@
 Aplikasi web berbasis CodeIgniter 3 untuk manajemen Praktik Kerja Lapangan (PKL) dengan sistem terintegrasi untuk Siswa, Hubin, dan Pembimbing. Aplikasi ini dilengkapi dengan fitur QR Code verifikasi, manajemen data lengkap, dan sistem pagination untuk data besar. Fokus aplikasi adalah pada proses pengajuan PKL, verifikasi oleh Hubin, dan penempatan pembimbing.
 
 
-### Penambahan Field Identitas Lengkap
-
-**Untuk Tabel `tb_user`:**
-- `email` (varchar(100)) - Email user
-- `telepon` (varchar(20)) - Nomor telepon/handphone  
-- `alamat` (text) - Alamat lengkap
-- `tempat_lahir` (varchar(100)) - Tempat lahir
-- `tanggal_lahir` (date) - Tanggal lahir
-- `jenis_kelamin` (enum('L','P')) - Jenis kelamin
-- `nip_nim` (varchar(50)) - NIP untuk pembimbing/NIM untuk siswa
-- `updated_at` (datetime) - Timestamp update terakhir
-
-**Untuk Tabel `tb_pembimbing`:**
-- `pendidikan_terakhir` (varchar(50)) - Tingkat pendidikan terakhir
-- `jabatan` (varchar(100)) - Jabatan fungsional/struktural
-- `jurusan_keahlian` (varchar(100)) - Bidang keahlian
-- `tahun_masuk` (year(4)) - Tahun masuk kerja
-- `status_kepegawaian` (enum) - Status kepegawaian (PNS/CPNS/Honorer/Kontrak)
-- `golongan` (varchar(10)) - Golongan pegawai
-- `tempat_tugas` (varchar(100)) - Lokasi/unit kerja
-
 ### Fitur Manajemen Biodata Lengkap
 
 **Untuk Hubin:**
@@ -47,7 +26,7 @@ Aplikasi web berbasis CodeIgniter 3 untuk manajemen Praktik Kerja Lapangan (PKL)
 
 ## 🎯 Fitur Utama
 
-### 1. **Siswa (Level 3)**
+### 1. **Siswa (Level 2)**
 - ✅ **Landing Page**: Halaman beranda dengan informasi sekolah dan statistik
 - ✅ **Pengajuan PKL**: Buat dan kirim pengajuan PKL dengan memilih perusahaan (DUDI) dan kelas (XI TKJ 1-3, XI Perbankan)
 - ✅ **Ajukan Ulang**: Siswa dapat mengajukan ulang pengajuan setelah diproses oleh Hubin (disetujui/ditolak)
