@@ -3,14 +3,6 @@
 
 Aplikasi web berbasis CodeIgniter 3 untuk manajemen Praktik Kerja Lapangan (PKL) dengan sistem terintegrasi untuk Siswa, Hubin, dan Pembimbing. Aplikasi ini dilengkapi dengan fitur QR Code verifikasi, manajemen data lengkap, dan sistem pagination untuk data besar. Fokus aplikasi adalah pada proses pengajuan PKL, verifikasi oleh Hubin, dan penempatan pembimbing.
 
-## 📋 Informasi Sekolah
-
-**Nama:** SMK ITIKURIH HIBARNA  
-**Alamat:** Jalan Raya Laswi No. 782 Ciparay Kab. Bandung [40381]  
-**Telpon:** 022-5957900  
-**Email:** smk@itikurih-hibarna.sch.id
-
-## ⚙️ Perubahan Terbaru (Update Identitas Lengkap)
 
 ### Penambahan Field Identitas Lengkap
 
@@ -41,9 +33,6 @@ Aplikasi web berbasis CodeIgniter 3 untuk manajemen Praktik Kerja Lapangan (PKL)
 - ✅ **Update Biodata** - Proses penyimpanan dengan cross-table sync
 - ✅ **Hapus Biodata** - Soft delete dengan konfirmasi keamanan
 
-**Untuk Pembimbing:**
-- ✅ **Profil Biodata Lengkap** - Form biodata profesional dengan tab navigasi
-- ✅ **Auto-sync** - Sinkronisasi otomatis antara tb_user dan tb_pembimbing
 
 **Untuk Siswa:**
 - ✅ **Data Siswa Komplit** - Informasi akademik dan pribadi terintegrasi
@@ -101,16 +90,6 @@ Aplikasi web berbasis CodeIgniter 3 untuk manajemen Praktik Kerja Lapangan (PKL)
 7. Assign pembimbing ke siswa yang disetujui
 8. Buat ID Card untuk siswa yang disetujui
 9. Buat pengumuman untuk siswa
-
-### 3. **Pembimbing (Level 2)**
-- ✅ **Monitor Siswa**: Lihat daftar siswa yang dibimbing (dikelompokkan per perusahaan)
-- ✅ **Profile Management**: Edit profile dan ubah password
-- ✅ **Dashboard Statistik**: Lihat statistik siswa yang dibimbing
-
-**Alur Pembimbing:**
-1. Login → Dashboard
-2. Lihat daftar siswa yang dibimbing (dikelompokkan per perusahaan)
-3. Pantau progress siswa
 
 ---
 
@@ -273,16 +252,6 @@ File `db_sipkl.sql` merupakan database utama yang berisi semua struktur dan data
 ---
 
 ## 🔐 Login Credentials Default
-
-Setelah import database `db_sipkl.sql`, gunakan kredensial berikut:
-
-- **Hubin:** `hubin` / `password`
-- **Pembimbing:** `pembimbing1` / `123`
-- **Siswa:** `siswa1` / `123`
-
-**Catatan:** Semua user default sudah tersedia di database. Hubin dapat menambah user baru melalui menu "Data User".
-
----
 
 ## 📁 Struktur File Penting
 
@@ -683,7 +652,7 @@ Untuk pertanyaan atau bantuan, hubungi:
 
 ## 📄 License
 
-© 2024 SMK ITIKURIH HIBARNA - All Rights Reserved
+© 2026 SMK ITIKURIH HIBARNA - All Rights Reserved
 
 ---
 
