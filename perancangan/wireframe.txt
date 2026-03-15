@@ -1,0 +1,137 @@
+DOKUMENTASI WIREFRAME SIPKL
+Sistem Informasi Pendataan Siswa Prakerin (PKL) – Peran Hubin
+
+================================================================================
+
+1. Wireframe Dashboard Hubin
+
+Dashboard Hubin dirancang sebagai pusat pengawasan dan pengelolaan aktivitas sistem SIPKL khusus untuk peran Hubungan Industri (Hubin). Halaman ini menjadi titik kontrol utama bagi pengguna Hubin untuk memantau status pengajuan, data siswa, berkas, informasi DUDI, serta informasi terkini. Fokus utama desain adalah penyajian ringkasan data secara cepat dan navigasi yang efisien.
+
+Gambar IV.2.2.1 Wireframe Dashboard Hubin
+
+Struktur halaman menggunakan sidebar vertikal tetap di sisi kiri yang berisi daftar menu navigasi seluruh modul sistem, dan area kanan sebagai konten utama. Sidebar dipilih agar navigasi selalu tersedia tanpa berpindah halaman. Di bagian atas terdapat bilah navigasi dengan logo SIPKL dan informasi pengguna Hubin.
+
+Bagian konten utama menampilkan empat kartu statistik horizontal: Pengajuan Menunggu, Total Siswa, Total Berkas, dan Perusahaan DUDI. Penyajian dalam bentuk kartu memudahkan pembacaan angka secara instan. Di bawahnya terdapat dua panel visualisasi: Status Pengajuan (diagram lingkaran) dan Distribusi Siswa (diagram batang). Bagian bawah berisi panel Pengumuman Terkini agar pengguna selalu mendapat pembaruan relevan.
+
+--------------------------------------------------------------------------------
+
+2. Wireframe Daftar Siswa
+
+Halaman Daftar Siswa dirancang sebagai pusat pengelolaan data siswa yang terdaftar dalam program PKL. Halaman ini memungkinkan Hubin untuk melihat, menambah, mengimpor, mengekspor, dan mengelola informasi detail setiap siswa. Fokus utama desain adalah penyajian data siswa secara terstruktur dan efisien.
+
+Gambar IV.2.2.2 Wireframe Daftar Siswa
+
+Struktur halaman menggunakan sidebar vertikal di sisi kiri dan area konten di sisi kanan. Konten utama diawali breadcrumb serta judul "Daftar Siswa". Di bawah judul terdapat tombol "+ Tambah Data Siswa" dan dropdown "Export/Import" untuk input dan pengelolaan data massal. Bilah pencarian "Cari NIS, nama, kelas..." memudahkan pencarian pada dataset besar.
+
+Bagian utama berupa tabel dengan kolom: #, NIS/NISN, Nama Siswa, Kelas & Jurusan, Telepon, Perusahaan (DUDI), Status (dengan toggle), dan Aksi. Kolom Aksi berisi ikon edit dan hapus. Penyajian tabel memudahkan perbandingan dan pengelolaan individual dalam satu tampilan terpadu.
+
+--------------------------------------------------------------------------------
+
+3. Wireframe Tambah Siswa
+
+Halaman Tambah Siswa dirancang untuk memasukkan data siswa baru ke dalam sistem SIPKL. Halaman ini menjadi titik awal pendaftaran informasi pribadi siswa, detail akun login, serta data terkait PKL. Fokus desain adalah formulir yang komprehensif namun terstruktur agar input data efisien dan akurat.
+
+Gambar IV.2.2.3 Wireframe Tambah Siswa
+
+Struktur halaman mempertahankan sidebar kiri dan area konten kanan. Konten diawali breadcrumb "Home / Daftar Siswa / Tambah Siswa" dan judul "Tambah Siswa" diikuti tombol "+ Tambah Data Siswa".
+
+Formulir terbagi tiga segmen: (1) Data Siswa—nama, NIS, NISN, jenis kelamin, tempat/tanggal lahir, kelas, jurusan, sekolah, telepon; (2) Akun Login Siswa—username, password, email, alamat; (3) Informasi PKL—perusahaan (DUDI), tanggal mulai/selesai PKL, lama pelaksanaan, status pengajuan, periode PKL. Di bawah formulir terdapat tombol "Simpan Data". Pengelompokan logis memudahkan pengisian berurutan dan terorganisir.
+
+--------------------------------------------------------------------------------
+
+4. Wireframe Data Pembimbing
+
+Halaman Data Pembimbing dirancang sebagai pusat pengelolaan informasi pembimbing yang terdaftar dalam sistem. Modul ini memungkinkan Hubin untuk melihat, mencari, menambah, mengedit, dan menghapus data pembimbing, serta memantau jumlah siswa yang dibimbing. Fokus desain adalah pengawasan dan manajemen peran pembimbing secara efisien.
+
+Gambar IV.2.2.4 Wireframe Data Pembimbing
+
+Struktur halaman menggunakan sidebar kiri dan area konten kanan. Konten diawali breadcrumb "Home / Data Pembimbing" dan judul "Data Pembimbing". Di bawahnya terdapat banner dengan badge "Total: X Pembimbing", tombol "+ Tambah Pembimbing", serta kolom pencarian "Cari nama pembimbing...".
+
+Komponen inti berupa tabel daftar pembimbing dengan kolom: #, Nama Pembimbing, NIP, Tempat Tugas, Pendidikan, Jabatan, Jumlah Siswa (format kuota misalnya 0/5 Siswa), Status, dan Aksi (edit, hapus). Penyajian tabel memudahkan peninjauan banyak entri sekaligus. Tombol aksi pada setiap baris memungkinkan pengelolaan individual tanpa membuka halaman terpisah.
+
+--------------------------------------------------------------------------------
+
+5. Wireframe Tambah Pembimbing
+
+Halaman Tambah Pembimbing dirancang untuk menginput data detail pembimbing yang akan terlibat dalam sistem SIPKL. Halaman ini berfungsi sebagai sarana bagi Hubin untuk meregistrasi pembimbing baru. Fokus desain adalah formulir yang lengkap dan terstruktur untuk pengumpulan informasi pembimbing.
+
+Gambar IV.2.2.5 Wireframe Tambah Pembimbing
+
+Struktur halaman menggunakan sidebar kiri dan area konten kanan. Konten diawali breadcrumb "Home / Data Pembimbing / Tambah Pembimbing", judul "Tambah Pembimbing", dan tombol "+ Tambah Data Pembimbing".
+
+Formulir disusun vertikal dengan field: Nama Pembimbing, NIP, Tempat Tugas, Tempat Lahir, Tanggal Lahir, Jenis Kelamin, Alamat, Pendidikan Terakhir, Jurusan Keahlian, Jabatan, Tahun Masuk, Status Kepegawaian, Telepon, dan Email. Field wajib ditandai asterisk. Di bawah formulir terdapat tombol "Simpan Data Pembimbing". Desain ini memastikan kelengkapan data sebelum disimpan.
+
+--------------------------------------------------------------------------------
+
+6. Wireframe Assign Pembimbing
+
+Halaman Assign Pembimbing dirancang untuk memfasilitasi penugasan guru pembimbing kepada siswa untuk kegiatan PKL. Modul ini krusial agar setiap siswa mendapat pengawasan yang tepat selama praktik kerja. Fokus desain adalah kemudahan pemilihan guru dan siswa serta konfirmasi penugasan.
+
+Gambar IV.2.2.6 Wireframe Assign Pembimbing
+
+Struktur halaman menggunakan sidebar kiri dan area konten kanan. Menu "Assign Pembimbing" disorot sebagai halaman aktif. Konten menampilkan breadcrumb, judul "Assign Pembimbing", serta tombol "Assign Pembimbing" dan "Assign Guru Pembimbing".
+
+Modal "Assign Guru Pembimbing ke Siswa" menjadi antarmuka utama penugasan. Di dalamnya: dropdown "Pilih Guru Pembimbing" untuk memilih guru; bagian "Siswa yang Dipilih" dengan kolom pencarian dan indikator "Total: X Siswa"; tombol "Batal" dan "Assign Pembimbing". Penempatan dalam modal memusatkan perhatian pada satu tugas sehingga alur penugasan jelas dan intuitif.
+
+--------------------------------------------------------------------------------
+
+7. Wireframe Data DUDI
+
+Halaman Data DUDI dirancang sebagai pusat pengelolaan data Dunia Usaha dan Dunia Industri (DUDI) yang terlibat dalam program PKL. Halaman ini menyediakan ringkasan statistik DUDI serta daftar lengkap yang dapat dicari dan dikelola. Fokus desain adalah penyajian informasi terstruktur dan fitur pengelolaan yang efisien.
+
+Gambar IV.2.2.7 Wireframe Data DUDI
+
+Struktur halaman mengikuti pola sidebar kiri dan konten kanan. Konten diawali breadcrumb "Home / Data DUDI" dan judul "Data DUDI Terpadu". Tiga kartu statistik horizontal menampilkan jumlah DUDI Mitra, DUDI Non-Mitra, dan Total DUDI. Di bawahnya terdapat tab filter: Semua DUDI, DUDI Mitra, DUDI Non-Mitra.
+
+Bagian utama berupa tabel "Daftar Semua DUDI" dengan kolom: #, Nama DUDI, Alamat, Status, Sumber, dan Aksi. Di atas tabel terdapat tombol "+ Tambah DUDI" dan kolom pencarian "Cari nama DUDI...". Kolom Aksi berisi ikon lihat, edit, dan hapus. Penyajian tabel dan filter memudahkan pengelolaan data DUDI dalam satu tampilan.
+
+--------------------------------------------------------------------------------
+
+8. Wireframe Tambah DUDI
+
+Halaman Tambah DUDI dirancang sebagai antarmuka untuk memasukkan data mitra industri baru ke dalam sistem SIPKL. Modul ini penting untuk mendokumentasikan informasi lengkap perusahaan tempat siswa melaksanakan PKL. Fokus desain adalah kemudahan pengisian form dan validasi data.
+
+Gambar IV.2.2.8 Wireframe Tambah DUDI
+
+Struktur halaman menggunakan sidebar kiri dan area konten kanan. Konten diawali breadcrumb "Home / Data DUDI / Tambah DUDI", judul "Tambah DUDI", dan panel "+ Tambah Data DUDI".
+
+Formulir disusun dua kolom. Kolom kiri: Nama DUDI, Alamat, Telepon, Email (field wajib ditandai). Kolom kanan: Penanggung Jawab (PIC), NIP PIC, Instruktur, NIP Instruktur, Status Mitra (dropdown default "Mitra"). Di bawah formulir terdapat tombol "Simpan Data" dan "Batalkan". Layout dua kolom mengoptimalkan ruang dan mengelompokkan informasi secara logis.
+
+--------------------------------------------------------------------------------
+
+9. Wireframe Verifikasi Pengajuan PKL
+
+Halaman verifikasi pengajuan PKL dirancang untuk memudahkan Hubin dalam meninjau dan mengelola permohonan PKL yang diajukan siswa. Fungsi utama adalah memvalidasi, menyetujui, atau menolak pengajuan serta menyediakan ringkasan status. Fokus desain adalah efisiensi proses peninjauan dan pengambilan keputusan.
+
+Gambar IV.2.2.9 Wireframe Verifikasi Pengajuan PKL
+
+Struktur halaman menggunakan sidebar kiri dan area konten kanan. Menu "Pengajuan PKL" disorot. Konten diawali breadcrumb "Home / Verifikasi Pengajuan" dan judul "Verifikasi Pengajuan". Bagian "Daftar Pengajuan" dilengkapi kolom pencarian "Cari nama siswa...".
+
+Informasi pengajuan disajikan dalam tabel dengan kolom: Nama Siswa, Kelas, Perusahaan, Status, dan Aksi. Setiap baris dilengkapi tombol Lihat, Setujui, Tolak, Hapus, serta indikator "X Berkas". Terdapat pula tombol "Tolak X Pengajuan" untuk aksi massal. Format tabel memudahkan perbandingan dan peninjauan banyak pengajuan; aksi langsung pada baris mempersingkat langkah kerja.
+
+--------------------------------------------------------------------------------
+
+10. Wireframe Pengumuman
+
+Halaman Pengumuman dirancang sebagai modul untuk mengelola dan menampilkan informasi pengumuman dalam sistem SIPKL. Modul ini memungkinkan Hubin untuk melihat pengumuman yang ada atau menambahkan pengumuman baru. Fokus halaman adalah kemudahan menyampaikan informasi penting kepada pengguna sistem.
+
+Gambar IV.2.2.10 Wireframe Pengumuman
+
+Struktur halaman menggunakan sidebar kiri dan area konten kanan. Menu "Informasi dan pengumuman" dalam kondisi aktif. Konten menampilkan breadcrumb "Home / Pengumuman", judul "Pengumuman", dan tombol "+ Tambah Pengumuman" di kanan atas.
+
+Area utama menampilkan daftar pengumuman atau, bila kosong, kotak informasi "Belum ada pengumuman. Silakan tambah pengumuman baru." Pemisahan jelas antara navigasi dan konten memudahkan fokus pada konten pengumuman. Tombol tambah di posisi menonjol mempercepat aksi menambah pengumuman baru.
+
+--------------------------------------------------------------------------------
+
+11. Wireframe Tambah Pengumuman
+
+Halaman Tambah Pengumuman dirancang agar Hubin dapat membuat dan mempublikasikan pengumuman baru dalam sistem SIPKL. Fokus utama adalah antarmuka yang sederhana dan jelas untuk memasukkan detail pengumuman sebelum disimpan dan disiarkan.
+
+Gambar IV.2.2.11 Wireframe Tambah Pengumuman
+
+Struktur halaman mengadopsi sidebar kiri dan area konten kanan. Menu "Informasi dan pengumuman" disorot. Konten diawali breadcrumb "Home / Pengumuman / Tambah Pengumuman" dan judul "Tambah Pengumuman".
+
+Bagian inti berupa "Form Tambah Pengumuman" dengan dua bidang: (1) Judul Pengumuman (wajib)—input teks dengan placeholder "Masukkan judul pengumuman"; (2) Isi Pengumuman (wajib)—textarea untuk "Masukkan isi pengumuman". Di bawah formulir terdapat tombol "Batal" dan "Simpan Pengumuman" sebagai aksi utama. Formulir minimal mengurangi beban kognitif dan mempercepat publikasi pengumuman.
+
+================================================================================
+SIPKL v2.0 - Sistem Pendataan Siswa Prakerin SMK ITIKURIH

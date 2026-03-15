@@ -1,0 +1,137 @@
+2)	Desain antarmuka
+Perancangan desain antarmuka pada sistem absensi berbasis web dilakukan untuk memastikan bahwa aplikasi tidak hanya berfungsi secara teknis, tetapi juga nyaman, intuitif, dan mudah digunakan oleh seluruh pengguna. Aspek visual menjadi perhatian utama karena tampilan yang baik dapat meningkatkan pemahaman, mempercepat interaksi, serta mengurangi kesalahan penggunaan. Oleh karena itu, perancangan antarmuka difokuskan pada pemilihan warna yang konsisten, tipografi yang mudah dibaca, penggunaan ikon yang komunikatif, serta tata visual yang rapi dan tidak berlebihan. Pendekatan desain yang digunakan mengedepankan prinsip minimalis dan user-friendly agar pengguna dari berbagai latar belakang dapat mengoperasikan sistem tanpa memerlukan pelatihan khusus. Dengan memperhatikan aspek estetika sekaligus kenyamanan penggunaan, diharapkan sistem mampu memberikan pengalaman interaksi yang efisien dan menyenangkan dalam aktivitas pengajuan PKL.
+
+a.	Desain Antarmuka Landing Page
+
+Desain antarmuka landing page difokuskan pada penyampaian kesan profesional, modern, dan informatif kepada pengunjung. Halaman ini menjadi titik kontak pertama antara pengguna dan sistem sehingga aspek visual memiliki peran penting dalam membangun kepercayaan. Pendekatan desain yang digunakan mengutamakan keterbacaan informasi serta tampilan yang bersih. Oleh karena itu, pemilihan warna, tipografi, dan komposisi visual dirancang agar nyaman dilihat dalam waktu lama.
+
+Gambar IV.2.2.24 Desain Antarmuka Landing Page
+Skema warna utama menggunakan kombinasi warna hangat seperti oranye sebagai warna primer dan putih sebagai latar belakang. Warna oranye dipilih karena mampu memberikan kesan energik, ramah, dan menarik perhatian pada elemen penting seperti tombol login. Latar belakang putih membantu meningkatkan kontras sehingga teks lebih mudah dibaca dan tidak melelahkan mata. Perpaduan ini menciptakan tampilan yang bersih sekaligus profesional.
+
+Tipografi menggunakan jenis huruf sans-serif dengan karakter sederhana agar mudah dibaca pada berbagai ukuran layar. Judul dibuat lebih tebal untuk menegaskan hierarki informasi, sedangkan teks isi menggunakan ukuran sedang agar nyaman dibaca. Ikon-ikon sederhana digunakan sebagai pendukung visual fitur tanpa mengganggu fokus utama. Secara keseluruhan, desain landing page menekankan estetika minimalis yang memberikan pengalaman pengguna yang ringan dan intuitif.
+
+b.	Desain Antarmuka Login
+
+Halaman login dirancang dengan pendekatan visual minimalis agar pengguna dapat langsung fokus pada proses autentikasi. Desain yang terlalu ramai berpotensi mengganggu konsentrasi dan memperlambat interaksi. Oleh karena itu, elemen visual dibatasi hanya pada komponen yang benar-benar diperlukan. Pendekatan ini bertujuan menciptakan pengalaman masuk sistem yang cepat dan efisien.
+
+Gambar IV.2.2.25 Desain Antarmuka Login
+Warna latar belakang dibuat netral dan terang untuk memberikan kesan bersih serta profesional. Form login menggunakan warna kontras ringan agar mudah dibedakan dari latar belakang tanpa terlihat mencolok. Tombol masuk diberi warna primer yang konsisten dengan tema aplikasi sehingga mudah dikenali sebagai aksi utama. Kontras warna ini membantu pengguna secara intuitif memahami langkah berikutnya.
+
+Tipografi tetap menggunakan font sans-serif untuk menjaga konsistensi dengan halaman lain. Ukuran teks label dibuat jelas dan tidak terlalu kecil agar mudah dibaca oleh berbagai usia pengguna. Ikon pada kolom username dan password membantu memperjelas fungsi masing-masing input. Hasilnya, halaman login terasa sederhana, cepat dipahami, dan tidak membingungkan bagi pengguna baru.
+
+c.	Desain Antarmuka Dashboard Siswa
+
+Dashboard siswa dirancang sebagai pusat informasi dan navigasi utama bagi siswa dalam sistem SIPKL. Antarmuka difokuskan pada penyajian informasi yang relevan dan kemudahan akses fitur penting. Pendekatan visual menggunakan sidebar kiri untuk navigasi dan konten utama di sebelah kanan untuk memastikan tata letak yang terstruktur dan intuitif.
+
+Gambar IV.2.2.26 Desain Antarmuka Dashboard Siswa
+Sidebar menggunakan warna yang berbeda dari konten utama untuk menciptakan pemisahan visual yang jelas. Menu navigasi mencakup "Beranda", "Pengajuan PKL", "Penempatan PKL", "Profil Saya", dan "Ubah Password" dengan ikon yang konsisten. Area konten utama menampilkan ringkasan aktivitas PKL seperti status pengajuan, tanggal mulai PKL, dan durasi PKL dalam format kartu yang informatif.
+
+Tipografi menggunakan hierarki yang jelas dengan judul halaman lebih besar dan tebal untuk memperkuat struktur informasi. Kartu statistik menggunakan warna lembut untuk membedakan kategori informasi tanpa menciptakan beban visual. Tampilan keseluruhan mengutamakan kejelasan dan kemudahan penggunaan bagi siswa dengan berbagai tingkat keahlian teknologi.
+
+d.	Desain Antarmuka Buat Pengajuan
+
+Halaman Buat Pengajuan dirancang untuk memungkinkan siswa membuat permohonan PKL baru dalam sistem. Modul ini merupakan titik awal proses PKL bagi siswa. Desain antarmuka fokus pada kemudahan pengisian form dan panduan yang jelas untuk meminimalkan kesalahan input data.
+
+Gambar IV.2.2.27 Desain Antarmuka Buat Pengajuan
+Layout menggunakan form terstruktur dengan input fields yang dikelompokkan secara logis. Informasi yang diperlukan mencakup data pribadi siswa, pilihan perusahaan DUDI, dan dokumen pendukung. Setiap field memiliki label yang jelas dan petunjuk input untuk memastikan pengguna memasukkan data yang benar.
+
+Formulir dirancang dengan validasi real-time yang memberikan feedback langsung kepada pengguna tentang kesalahan input. Tombol "Submit Pengajuan" menggunakan warna primer yang mencolok untuk menunjukkan aksi utama, dilengkapi dengan tombol "Batal" untuk membatalkan proses. Pendekatan desain ini mendukung pengalaman pengguna yang efisien dan mengurangi kebingungan saat pengisian data.
+
+e.	Desain Antarmuka Pengajuan di Proses
+
+Halaman ini menampilkan status dan detail dari pengajuan PKL yang sedang diproses. Antarmuka dirancang untuk memberikan transparansi kepada siswa tentang tahapan verifikasi pengajuan mereka. Pendekatan desain fokus pada informasi status yang jelas dan riwayat aktivitas yang terorganisir.
+
+Gambar IV.2.2.28 Desain Antarmuka Pengajuan di Proses
+Tampilan menggunakan sistem indikator visual berbasis warna untuk menunjukkan status pengajuan seperti "Menunggu Verifikasi", "Diterima", atau "Ditolak". Tabel informasi mencakup kolom seperti No, Tanggal Pengajuan, Perusahaan Tujuan, Status, dan Keterangan dengan pagination untuk mengelola data dalam jumlah besar.
+
+Indikator status menggunakan warna yang konsisten (hijau untuk disetujui, kuning untuk menunggu, merah untuk ditolak) untuk memudahkan pengguna memahami kondisi pengajuan secara sekilas. Fitur filter dan pencarian tersedia untuk membantu pengguna menemukan pengajuan spesifik dengan cepat. Tampilan dirancang informatif namun tidak terlalu kompleks.
+
+f.	Desain Antarmuka Profil Siswa
+
+Halaman Profil Siswa dirancang sebagai tempat siswa mengelola informasi pribadi dan biodata mereka dalam sistem SIPKL. Antarmuka menitikberatkan pada kemudahan pembaruan data dan visibilitas informasi pribadi dalam format yang terstruktur dan ramah pengguna.
+
+Gambar IV.2.2.29 Desain Antarmuka Profil Siswa
+Desain menggunakan layout dua kolom dengan informasi dasar siswa di panel kiri (foto profil, nama, NIS, kelas) dan detail lengkap di panel kanan. Bagian biodata menampilkan informasi terstruktur meliputi alamat, nomor telepon, orang tua, dan detail akademik dalam format yang mudah dibaca.
+
+Form edit profil menggunakan pendekatan progressive disclosure untuk mengelompokkan data terkait dan mengurangi beban visual saat pengguna ingin melakukan pembaruan data. Setiap field memiliki validasi yang sesuai dengan jenis datanya untuk memastikan integritas informasi profil pengguna.
+
+g.	Desain Antarmuka ID Card Digital
+
+ID Card digital merupakan fitur yang menampilkan kartu identitas elektronik siswa yang sedang menjalani PKL. Antarmuka difokuskan pada penyajian informasi yang formal dan sesuai standar kartu identitas yang berlaku untuk penggunaan profesional selama PKL berlangsung.
+
+Gambar IV.2.2.30 Desain Antarmuka ID Card
+Layout menampilkan kartu dalam format standar dengan elemen yang disusun simetris: foto siswa di bagian atas, data personal di tengah, dan informasi DUDI tempat PKL di bagian bawah. Desain menggunakan konvensi layout kartu ID dengan elemen-elemen yang standar dan terstruktur rapi.
+
+Antarmuka menyertakan barcode yang valid dan tombol "Cetak" dengan konfirmasi untuk mencetak versi fisik dari kartu ID tersebut. Pengaturan ukuran kartu mengikuti standar cetak untuk memastikan konsistensi ukuran baik versi digital maupun cetakannya. Visual didesain untuk menjaga kesan profesional dan siap pakai dalam lingkungan PKL.
+
+h.	Desain Antarmuka Kontak Pembimbing
+
+Antarmuka menyediakan informasi kontak pembimbing akademik dan lapangan untuk kebutuhan koordinasi PKL siswa. Tampilan mengedepankan informasi komunikasi dalam format yang praktis dan siap digunakan saat diperlukan pembimbingan dan pendampingan dalam praktik kerja.
+
+Gambar IV.2.2.31 Desain Antarmuka Kontak Pembimbing
+Pengorganisasian daftar kontak menggunakan pendekatan grid dengan setiap item merupakan kartu kecil berisi identitas guru dan kanal kontak beragam. Seiring urusan deskripsi, informasi yang disajikan mencakup foto, nama lengkap, NIP, mata pelajaran, nomor telepon, dan alamat email.
+
+Fitur pencarian dan filter memungkinkan pengguna menemukan pembimbing tertentu berdasarkan nama atau mata pelajaran. Desain kartu kontak menggunakan konvensi yang umum dalam aplikasi kontak digital untuk memastikan kemudahan penggunaan dan pengenalan fungsi yang intuitif.
+
+i.	Desain Antarmuka Penempatan PKL
+
+Halaman ini menampilkan informasi detail tentang penempatan PKL siswa di DUDI terkait, termasuk data perusahaan, instruktur lapangan, dan jadwal pelaksanaan. Antarmuka dirancang untuk memberikan informasi komprehensif yang membantu siswa mempersiapkan diri untuk pelaksanaan PKL yang efektif.
+
+Gambar IV.2.2.32 Desain Antarmuka Penempatan PKL
+Layout menggunakan pendekatan informasi terstruktur dengan panel utama yang menampilkan data DUDI dan panel samping untuk informasi tambahan seperti peta lokasi dan jadwal. Informasi disajikan dalam format yang terorganisir dengan jelas menggunakan heading dan subheading yang konsisten.
+
+Desain menyertakan informasi kontak yang lengkap, deskripsi kegiatan PKL, dan detail instruktur lapangan untuk memastikan siswa memiliki semua informasi yang diperlukan sebelum memulai PKL. Visual menggunakan pendekatan yang informatif namun tidak terlalu padat untuk menjaga kenyamanan membaca.
+
+j.	Desain Antarmuka Ubah Password
+
+Halaman Ubah Password dirancang untuk mengelola keamanan akun siswa dengan fokus pada validasi input yang ketat dan panduan keamanan yang jelas. Antarmuka menggunakan pendekatan yang sederhana namun efektif untuk memastikan pengguna dapat mengganti password dengan aman dan benar.
+
+Gambar IV.2.2.33 Desain Antarmuka Ubah Password
+Form menggunakan pendekatan minimalis dengan tiga input field utama: password lama, password baru, dan konfirmasi password. Setiap field dilengkapi dengan validasi real-time yang memberikan feedback langsung tentang kekuatan password dan kesesuaian konfirmasi.
+
+Sistem validasi menggunakan indikator visual berbasis warna untuk menunjukkan kekuatan password (merah untuk lemah, kuning untuk sedang, hijau untuk kuat). Petunjuk keamanan password ditampilkan secara jelas untuk memandu pengguna membuat password yang aman sesuai standar keamanan sistem.
+
+k.	Desain Antarmuka Dashboard Hubin
+
+Dashboard Hubin dirancang sebagai pusat kontrol dan monitoring untuk koordinator hubungan industri dalam mengelola program PKL secara keseluruhan. Antarmuka difokuskan pada penyajian data statistik, manajemen pengajuan, dan pengawasan pelaksanaan PKL dengan pendekatan yang informatif dan efisien.
+
+Gambar IV.2.2.34 Desain Antarmuka Dashboard Hubin
+Layout menggunakan pendekatan dashboard dengan widget statistik di bagian atas dan panel manajemen di bagian bawah. Widget statistik menampilkan data seperti jumlah pengajuan, status verifikasi, dan distribusi penempatan dalam format visual yang menarik dan informatif.
+
+Menu navigasi sidebar mencakup fitur-fitur manajemen utama seperti "Dashboard", "Manajemen Pengajuan", "Data DUDI", "Pengelompokan", dan "Laporan". Desain menggunakan sistem warna yang konsisten dengan kode warna untuk status berbeda (hijau untuk aktif, kuning untuk menunggu, merah untuk perlu perhatian) untuk memudahkan identifikasi kondisi sistem secara visual.
+
+l.	Desain Antarmuka Manajemen Pengajuan
+
+Halaman ini menyediakan antarmuka lengkap untuk mengelola seluruh pengajuan PKL dari siswa, termasuk verifikasi, penjadwalan, dan koordinasi dengan DUDI. Antarmuka dirancang untuk mendukung proses manajemen yang kompleks dengan pendekatan yang terstruktur dan efisien.
+
+Gambar IV.2.2.35 Desain Antarmuka Manajemen Pengajuan
+Tampilan menggunakan tabel data dengan fitur filter dan pencarian yang canggih untuk mengelola pengajuan dalam jumlah besar. Setiap baris data menampilkan informasi lengkap siswa, status pengajuan, dan aksi yang tersedia seperti "Verifikasi", "Tolak", atau "Jadwalkan".
+
+Sistem notifikasi dan alert digunakan untuk menandai pengajuan yang memerlukan perhatian segera atau telah melewati batas waktu tertentu. Desain menggunakan pendekatan yang informatif dengan informasi yang terorganisir dengan baik untuk memastikan koordinator dapat mengambil keputusan dengan cepat dan akurat.
+
+m.	Desain Antarmuka Data DUDI
+
+Antarmuka untuk mengelola database perusahaan mitra DUDI yang berpartisipasi dalam program PKL. Sistem dirancang untuk memudahkan penambahan, pengeditan, dan penghapusan data perusahaan dengan pendekatan yang terstruktur dan validasi data yang ketat.
+
+Gambar IV.2.2.36 Desain Antarmuka Data DUDI
+Form input menggunakan pendekatan tabbed interface untuk mengelompokkan informasi berdasarkan kategori seperti data perusahaan, kontak, dan kapasitas PKL. Setiap field memiliki validasi yang sesuai dengan jenis datanya untuk memastikan kualitas data yang tinggi.
+
+Tampilan daftar menggunakan sistem grid dengan kartu perusahaan yang menampilkan informasi utama secara visual. Fitur pencarian dan filter memungkinkan pengguna menemukan perusahaan tertentu dengan cepat berdasarkan nama, bidang usaha, atau lokasi. Desain mengutamakan kemudahan pengelolaan data dalam jumlah besar.
+
+n.	Desain Antarmuka Pengelompokan
+
+Sistem pengelompokan siswa untuk PKL dirancang dengan antarmuka yang mendukung proses penempatan yang efisien dan adil. Antarmuka menyediakan tools untuk mengelompokkan siswa berdasarkan kriteria berbagai seperti jurusan, minat, dan kapasitas DUDI dengan pendekatan yang visual dan interaktif.
+
+Gambar IV.2.2.37 Desain Antarmuka Pengelompokan
+Layout menggunakan pendekatan drag-and-drop untuk memudahkan proses pengelompokan siswa ke perusahaan DUDI yang tersedia. Visual menggunakan sistem warna untuk menunjukkan status penempatan dan kapasitas yang tersisa di setiap perusahaan.
+
+Sistem rekomendasi otomatis membantu koordinator dalam proses pengelompokan berdasarkan kesesuaian jurusan dan minat siswa. Desain menyertakan fitur simulasi penempatan untuk memungkinkan koordinator melihat hasil pengelompokan sebelum menerapkannya secara permanen.
+
+o.	Desain Antarmuka Laporan dan Statistik
+
+Dashboard laporan menyediakan antarmuka untuk menghasilkan dan menampilkan berbagai jenis laporan statistik tentang program PKL. Sistem dirancang untuk memberikan insight yang berharga tentang efektivitas program dan distribusi penempatan dengan pendekatan yang informatif dan visual.
+
+Gambar IV.2.2.38 Desain Antarmuka Laporan dan Statistik
+Tampilan menggunakan berbagai jenis visualisasi data seperti chart, graph, dan diagram untuk menyajikan informasi statistik secara menarik dan mudah dipahami. Widget statistik menampilkan data real-time tentang jumlah peserta, tingkat penempatan, dan performa program secara keseluruhan.
+
+Sistem filter dan parameter yang fleksibel memungkinkan pengguna menghasilkan laporan kustom sesuai kebutuhan spesifik. Desain menggunakan pendekatan yang informatif dengan visual yang menarik untuk memastikan informasi statistik dapat dipahami dengan cepat dan akurat oleh stakeholder berbagai tingkat.

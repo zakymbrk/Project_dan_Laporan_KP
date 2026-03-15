@@ -1,0 +1,529 @@
+SISTEM INFORMASI PKL (SIPKL)
+ALUR WEBSITE DAN DIAGRAM
+
+==================================================
+1. ACTIVITY DIAGRAM - ADMIN/HUBIN
+==================================================
+
+[Login Admin/Hubin]
+     |
+     v
+[Dashboard Admin/Hubin]
+     |
+     +---> [Kelola Data Siswa]
+     |        |
+     |        +---> [Tambah Siswa]
+     |        +---> [Edit Siswa]
+     |        +---> [Hapus Siswa]
+     |        +---> [Import Data Siswa]
+     |        |
+     |        v
+     |   [Validasi Data Siswa]
+     |        |
+     |        v
+     |   [Simpan ke Database]
+     |
+     +---> [Kelola Data DUDI]
+     |        |
+     |        +---> [Tambah DUDI]
+     |        +---> [Edit DUDI]
+     |        +---> [Hapus DUDI]
+     |        |
+     |        v
+     |   [Simpan Data DUDI]
+     |
+     +---> [Kelola Pengajuan PKL]
+     |        |
+     |        +---> [Lihat Daftar Pengajuan]
+     |        +---> [Verifikasi Pengajuan]
+     |        |        |
+     |        |        +---> [Terima Pengajuan]
+     |        |        +---> [Tolak Pengajuan]
+     |        |        |
+     |        |        v
+     |        |   [Kirim Notifikasi]
+     |        |
+     |        v
+     |   [Update Status Pengajuan]
+     |
+     +---> [Kelola Pembimbing]
+     |        |
+     |        +---> [Tambah Pembimbing]
+     |        +---> [Edit Pembimbing]
+     |        +---> [Hapus Pembimbing]
+     |        +---> [Assign Pembimbing ke Siswa]
+     |        |
+     |        v
+     |   [Simpan Data Pembimbing]
+     |
+     +---> [Kelola Pengumuman]
+     |        |
+     |        +---> [Buat Pengumuman]
+     |        +---> [Edit Pengumuman]
+     |        +---> [Hapus Pengumuman]
+     |        |
+     |        v
+     |   [Publikasi Pengumuman]
+     |
+     v
+    [logout]
+    
+
+==================================================
+2. ACTIVITY DIAGRAM - SISWA
+==================================================
+
+[Sistem Pendataan Siswa Prakerin]
+     |
+     v
+[Dashboard Siswa]
+     |
+     +---> [Lihat Profil]
+     |        |
+     |        +---> [Edit Profil]
+     |        +---> [Upload Foto]
+     |        |
+     |        v
+     |   [Simpan Perubahan]
+     |
+     +---> [Kelola Pengajuan PKL]
+     |        |
+     |        +---> [Buat Pengajuan Baru]
+     |        |        |
+     |        |        +---> [Pilih DUDI]
+     |        |        +---> [Upload Berkas]
+     |        |        +---> [Isi Formulir]
+     |        |        |
+     |        |        v
+     |        |   [Kirim Pengajuan]
+     |        |
+     |        +---> [Lihat Status Pengajuan]
+     |        +---> [Edit Draft Pengajuan]
+     |        |
+     |        v
+     |   [Notifikasi Status]
+     |
+     +---> [Lihat Pengumuman]
+     |        |
+     |        v
+     |    [Baca Detail Pengumuman]
+     |
+     |
+     v
+[logout]
+==================================================
+3. USE CASE DIAGRAM
+==================================================
+
+                    SISTEM INFORMASI PKL
+
+[Aktor: Admin/Hubin]                           [Aktor: Siswa]
+         |                                            |
+         |                                            |
+    [Kelola Siswa]                             [Kelola Profil]
+         |                                            |
+    [Kelola DUDI]                              [Ajukan PKL]
+         |                                            |
+    [Kelola Pengajuan]                         [Lihat Status]
+         |                                            |
+    [Kelola Pembimbing]                        [Lihat Penempatan]
+         |                                            |
+    [Kelola Pengumuman]                        [Lihat Pengumuman]
+         |                                            |
+         +--------------------+-----------------------+
+                              |
+                        [Sistem SIPKL]
+                              |
+                        [Database MySQL]
+
+USE CASE DESCRIPTION:
+
+1. UC-01: Login Sistem
+   - Aktor: Admin/Hubin, Siswa
+   - Deskripsi: Pengguna melakukan autentikasi untuk mengakses sistem
+
+2. UC-02: Kelola Data Siswa
+   - Aktor: Admin/Hubin
+   - Deskripsi: Mengelola data siswa (tambah, edit, hapus, import)
+
+3. UC-03: Ajukan PKL
+   - Aktor: Siswa
+   - Deskripsi: Siswa membuat pengajuan PKL ke DUDI tertentu
+
+4. UC-04: Verifikasi Pengajuan
+   - Aktor: Admin/Hubin
+   - Deskripsi: Memverifikasi dan menyetujui/tolak pengajuan PKL
+
+5. UC-05: Lihat Status Pengajuan
+   - Aktor: Siswa
+   - Deskripsi: Siswa melihat status pengajuan PKL mereka
+
+6. UC-06: Kelola DUDI
+   - Aktor: Admin/Hubin
+   - Deskripsi: Mengelola data Dunia Usaha/Dunia Industri
+
+7. UC-07: Kelola Pembimbing
+   - Aktor: Admin/Hubin
+   - Deskripsi: Mengelola data pembimbing dan assign ke siswa
+
+8. UC-08: Kelola Pengumuman
+   - Aktor: Admin/Hubin
+   - Deskripsi: Membuat dan mengelola pengumuman untuk siswa
+
+9. UC-09: Lihat Pengumuman
+   - Aktor: Siswa
+   - Deskripsi: Siswa melihat pengumuman yang dipublikasikan
+
+==================================================
+4. CLASS DIAGRAM
+==================================================
+
+                    SISTEM INFORMASI PKL - CLASS DIAGRAM
+
+                    ┌─────────────────┐
+                    │   tb_group      │
+                    │ ┌─────────────┐ │
+                    │ │ group_id: int│ │
+                    │ │ (PK)        │ │
+                    │ │ group_name: │ │
+                    │ │ varchar     │ │
+                    │ │ created_at: │ │
+                    │ │ timestamp   │ │
+                    │ │ updated_at: │ │
+                    │ │ timestamp   │ │
+                    │ └─────────────┘ │
+                    └─────────────────┘
+                            │
+                            │ (level) many-to-one
+                            ▼
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│    tb_user      │     │    tb_siswa     │     │     tb_dudi     │
+│ ┌─────────────┐ │     │ ┌─────────────┐ │     │ ┌─────────────┐ │
+│ │ id: int (PK)│ │     │ │ siswa_id: int│ │     │ │ dudi_id: int │ │
+│ │ user_code:  │ │◄────┼─│ (PK)        │ │     │ │ (PK)        │ │
+│ │ varchar     │ │     │ │ siswa_code: │ │     │ │ dudi_code:  │ │
+│ │ username:   │ │     │ │ varchar     │ │     │ │ varchar     │ │
+│ │ varchar     │ │     │ │ user_id: int│ │     │ │ dudi_nama:  │ │
+│ │ password:   │ │     │ │ (FK)        │ │     │ │ varchar     │ │
+│ │ varchar     │ │     │ │ dudi_id: int│ │     │ │ dudi_alamat:│ │
+│ │ nama_lengkap│ │     │ │ (FK)        │ │     │ │ text        │ │
+│ │ : varchar   │ │     │ │ pembimbing_id││     │ │ dudi_telepon│ │
+│ │ email:      │ │     │ │ : int (FK)  │ │     │ │ : varchar   │ │
+│ │ varchar     │ │     │ │ siswa_nama: │ │     │ │ dudi_email: │ │
+│ │ telepon:    │ │     │ │ varchar     │ │     │ │ varchar     │ │
+│ │ varchar     │ │     │ │ siswa_kelas:│ │     │ │ dudi_pic:   │ │
+│ │ alamat:     │ │     │ │ varchar     │ │     │ │ varchar     │ │
+│ │ text        │ │     │ │ siswa_jurusan││     │ │ dudi_nip_   │ │
+│ │ tempat_lahir│ │     │ │ : varchar   │ │     │ │ pic: varchar│ │
+│ │ : varchar   │ │     │ │ siswa_nis:  │ │     │ │ dudi_instruktur││
+│ │ tanggal_lahir││     │ │ varchar     │ │     │ │ : varchar   │ │
+│ │ : date      │ │     │ │ siswa_nisn: │ │     │ │ dudi_nip_   │ │
+│ │ jenis_kelamin││     │ │ varchar     │ │     │ │ instruktur: │ │
+│ │ : enum      │ │     │ │ status_peng-│ │     │ │ varchar     │ │
+│ │ nip_nim:    │ │     │ │ ajuan: enum │ │     │ │ status_kerja│ │
+│ │ varchar     │ │     │ │ tanggal_mulai││     │ │ sama: enum  │ │
+│ │ foto_profil:│ │     │ │ : date      │ │     │ │ is_mitra:   │ │
+│ │ varchar     │ │     │ │ tanggal_sele-│ │     │ │ tinyint     │ │
+│ │ level: int  │ │     │ │ sai: date   │ │     │ │ sumber_data:│ │
+│ │ (FK)        │ │     │ │ lama_pelaksa│ │     │ │ enum        │ │
+│ │ is_active:  │ │     │ │ -an: int    │ │     │ │ created_at: │ │
+│ │ tinyint     │ │     │ │ surat_permo-│ │     │ │ timestamp   │ │
+│ │ created_at: │ │     │ │ honan: var- │ │     │ │ updated_at: │ │
+│ │ timestamp   │ │     │ │ char        │ │     │ │ timestamp   │ │
+│ │ updated_at: │ │     │ │ surat_balas-│ │     │ └─────────────┘ │
+│ │ timestamp   │ │     │ │ an: varchar │ │     │     │           │
+│ └─────────────┘ │     │ │ periode:    │ │     │     │           │
+│                 │     │ │ varchar     │ │     │     │           │
+│                 │     │ │ other_dudi_ │ │     │     │           │
+│                 │     │ │ nama: varchar││     │     │           │
+│                 │     │ │ is_active:  │ │     │     │           │
+│                 │     │ │ tinyint     │ │     │     │           │
+│                 │     │ │ created_at: │ │     │     │           │
+│                 │     │ │ timestamp   │ │     │     │           │
+│                 │     │ │ updated_at: │ │     │     │           │
+│                 │     │ │ timestamp   │ │     │     │           │
+│                 │     │ └─────────────┘ │     │     │           │
+└─────────────────┘     │     │           │     │     │           │
+                        │     │           │     │     │           │
+                        │     ▼           │     │     │           │
+                        │ ┌─────────────┐ │     │     │           │
+                        │ │tb_pengelom- │ │     │     │           │
+                        │ │ pokan       │ │     │     │           │
+                        │ │ ┌─────────┐ │ │     │     │           │
+                        │ │ │ id: int │ │ │     │     │           │
+                        │ │ │ (PK)    │ │ │     │     │           │
+                        │ │ │ pembimb │ │ │     │     │           │
+                        │ │ │ ing_id: │ │ │     │     │           │
+                        │ │ │ int (FK)│ │ │     │     │           │
+                        │ │ │ siswa_id│ │ │     │     │           │
+                        │ │ │ : int   │ │ │     │     │           │
+                        │ │ │ (FK)    │ │ │     │     │           │
+                        │ │ │ created_│ │ │     │     │           │
+                        │ │ │ at: time│ │ │     │     │           │
+                        │ │ │ stamp   │ │ │     │     │           │
+                        │ │ │ updated_│ │ │     │     │           │
+                        │ │ │ at: time│ │ │     │     │           │
+                        │ │ │ stamp   │ │ │     │     │           │
+                        │ │ └─────────┘ │ │     │     │           │
+                        │ └─────────────┘ │     │     │           │
+                        └─────────────────┘     │     │           │
+                                                  │     │           │
+                                                  │     │           │
+                        ┌─────────────────┐     │     │           │
+                        │tb_pembimbing    │     │     │           │
+                        │ ┌─────────────┐ │     │     │           │
+                        │ │pembimbing_id│ │     │     │           │
+                        │ │ : int (PK)  │ │     │     │           │
+                        │ │pembimbing_co│ │     │     │           │
+                        │ │ de: varchar │ │     │     │           │
+                        │ │pembimbing_na│ │     │     │           │
+                        │ │ me: varchar │ │     │     │           │
+                        │ │pembimbing_ni│ │     │     │           │
+                        │ │ p: varchar  │ │     │     │           │
+                        │ │pembimbing_te│ │     │     │           │
+                        │ │ lepon: varch│ │     │     │           │
+                        │ │ ar          │ │     │     │           │
+                        │ │pembimbing_em│ │     │     │           │
+                        │ │ ail: varchar│ │     │     │           │
+                        │ │pembimbing_ad│ │     │     │           │
+                        │ │ dress: text │ │     │     │           │
+                        │ │tempat_lahir │ │     │     │           │
+                        │ │ : varchar   │ │     │     │           │
+                        │ │tanggal_lahir│ │     │     │           │
+                        │ │ : date      │ │     │     │           │
+                        │ │jenis_kelamin│ │     │     │           │
+                        │ │ : enum      │ │     │     │           │
+                        │ │pendidikan_te│ │     │     │           │
+                        │ │ rakhir: var-│ │     │     │           │
+                        │ │ char        │ │     │     │           │
+                        │ │jabatan: var-│ │     │     │           │
+                        │ │ char        │ │     │     │           │
+                        │ │jurusan_keaha│ │     │     │           │
+                        │ │ lian: varchar││     │     │           │
+                        │ │tahun_masuk: │ │     │     │           │
+                        │ │ year        │ │     │     │           │
+                        │ │status_kepaga│ │     │     │           │
+                        │ │ waian: varch│ │     │     │           │
+                        │ │ ar          │ │     │     │           │
+                        │ │tempat_tugas:│ │     │     │           │
+                        │ │ varchar     │ │     │     │           │
+                        │ │is_active:   │ │     │     │           │
+                        │ │ tinyint     │ │     │     │           │
+                        │ │created_at:  │ │     │     │           │
+                        │ │ timestamp   │ │     │     │           │
+                        │ │updated_at:  │ │     │     │           │
+                        │ │ timestamp   │ │     │     │           │
+                        │ └─────────────┘ │     │     │           │
+                        └─────────────────┘     │     │           │
+                            │                     │     │           │
+                            │ (created_by)        │     │           │
+                            ▼                     │     │           │
+                    ┌─────────────────┐           │     │           │
+                    │ tb_pengumuman   │           │     │           │
+                    │ ┌─────────────┐ │           │     │           │
+                    │ │pengumuman_id│ │           │     │           │
+                    │ │ : int (PK)  │ │           │     │           │
+                    │ │judul: varchar│ │           │     │           │
+                    │ │isi: text     │ │           │     │           │
+                    │ │gambar: varchar│ │           │     │           │
+                    │ │created_by:   │ │           │     │           │
+                    │ │ int (FK)    │ │           │     │           │
+                    │ │is_active:    │ │           │     │           │
+                    │ │ tinyint     │ │           │     │           │
+                    │ │created_at:   │ │           │     │           │
+                    │ │ timestamp   │ │           │     │           │
+                    │ │updated_at:   │ │           │     │           │
+                    │ │ timestamp   │ │           │     │           │
+                    │ └─────────────┘ │           │     │           │
+                    └─────────────────┘           │     │           │
+                                                  │     │           │
+                                                  ▼     ▼           ▼
+
+RELATIONSHIPS:
+- tb_group "1" ──» "0..*" tb_user (one-to-many)
+- tb_user "1" ──» "0..*" tb_siswa (one-to-many)
+- tb_user "1" ──» "0..*" tb_pengumuman (one-to-many)
+- tb_dudi "1" ──» "0..*" tb_siswa (one-to-many)
+- tb_pembimbing "1" ──» "0..*" tb_siswa (one-to-many)
+- tb_pembimbing "1" ──» "0..*" tb_pengelompokan (one-to-many)
+- tb_siswa "1" ──» "0..*" tb_pengelompokan (one-to-many)
+- tb_pengelompokan "0..*" «── "1" tb_pembimbing (many-to-one)
+- tb_pengelompokan "0..*" «── "1" tb_siswa (many-to-one)
+
+==================================================
+5. ARSITEKTUR SISTEM
+==================================================
+
+CLIENT LAYER:
+- Browser (Chrome, Firefox, Edge)
+- Responsive Web Design
+
+APPLICATION LAYER:
+- CodeIgniter Framework (PHP)
+- MVC Architecture
+- Controllers:
+  * Auth.php (Autentikasi)
+  * Administrator.php (Admin functions)
+  * Hubin.php (Koordinator functions)
+  * Siswa.php (Student functions)
+  * Export_excel.php (Export data)
+
+MODEL LAYER:
+- M_user.php (User management)
+- M_siswa.php (Student data)
+- M_dudi.php (Industry data)
+- M_pengajuan.php (Internship applications)
+- M_pembimbing.php (Supervisors)
+- M_pengumuman.php (Announcements)
+
+VIEW LAYER:
+- Bootstrap 4 UI Framework
+- Admin Template
+- Student Template
+- Responsive Layout
+
+DATABASE LAYER:
+- MySQL Database
+- Tables: users, siswa, dudi, pengajuan, pembimbing, pengumuman
+
+==================================================
+6. FLOW DATA SISTEM
+==================================================
+
+LOGIN FLOW:
+1. User mengakses halaman login
+2. Sistem memvalidasi username & password
+3. Jika valid, buat session
+4. Redirect ke dashboard sesuai role
+5. Jika tidak valid, tampilkan error
+
+PENGAJUAN PKL FLOW:
+1. Siswa login dan akses menu pengajuan
+2. Siswa memilih DUDI dan mengisi form
+3. Siswa upload berkas pendukung
+4. Siswa kirim pengajuan
+5. Sistem simpan ke database dengan status "pending"
+6. Admin/Hubin menerima notifikasi
+7. Admin/Hubin verifikasi pengajuan
+8. Admin/Hubin update status (diterima/ditolak)
+9. Sistem kirim notifikasi ke siswa
+10. Siswa dapat melihat status terbaru
+
+VERIFIKASI PENGAJUAN FLOW:
+1. Admin/Hubin login dan akses menu pengajuan
+2. Admin/Hubin lihat daftar pengajuan
+3. Admin/Hubin pilih pengajuan untuk diverifikasi
+4. Admin/Hubin review berkas dan data
+5. Admin/Hubin tentukan keputusan (terima/tolak)
+6. Admin/Hubin input catatan/alasan
+7. Sistem update status dan kirim notifikasi
+8. Log aktivitas disimpan untuk audit trail
+
+PENGUMUMAN FLOW:
+1. Admin/Hubin login dan akses menu pengumuman
+2. Admin/Hubin buat pengumuman baru
+3. Admin/Hubin isi judul, isi, dan tanggal
+4. Admin/Hubin publikasikan pengumuman
+5. Sistem simpan ke database
+6. Siswa dapat melihat pengumuman di dashboard
+
+==================================================
+7. TEKNOLOGI YANG DIGUNAKAN
+==================================================
+
+BACKEND:
+- PHP 7.4+
+- CodeIgniter 3.1.13
+- MySQL 5.7+
+
+FRONTEND:
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap 4
+- jQuery
+
+LIBRARIES:
+- PHPExcel (Export Excel)
+- TCPDF (PDF Generation)
+- QR Code Generator
+- Font Awesome (Icons)
+
+SERVER:
+- Apache 2.4+
+- XAMPP Environment
+
+==================================================
+8. SECURITY MEASURES
+==================================================
+
+1. Authentication:
+   - Password hashing dengan bcrypt
+   - Session management
+   - CSRF protection
+
+2. Authorization:
+   - Role-based access control
+   - Hak akses berdasarkan role
+
+3. Data Validation:
+   - Input sanitization
+   - SQL injection prevention
+   - XSS protection
+
+4. File Upload:
+   - Validasi tipe file
+   - Size limitation
+   - Sanitasi nama file
+
+==================================================
+9. MAINTENANCE & MONITORING
+==================================================
+
+LOGGING:
+- Activity logs
+- Error logs
+- Login attempts
+- System events
+
+BACKUP:
+- Database backup rutin
+- File backup
+- Recovery procedures
+
+MONITORING:
+- Error tracking
+- Performance monitoring
+- User activity audit
+
+==================================================
+10. WEBSITE SCOPE & EXCLUSIONS
+==================================================
+
+FITUR YANG ADA:
+- Autentikasi user (Admin/Hubin dan Siswa)
+- Manajemen data siswa
+- Manajemen data DUDI
+- Sistem pengajuan PKL
+- Verifikasi pengajuan oleh admin/hubin
+- Manajemen pembimbing
+- Sistem pengumuman
+- Manajemen profil user
+- Export data ke Excel
+- Landing page sebagai halaman publik untuk memperkenalkan sistem
+
+FITUR YANG TIDAK ADA (EXCLUDED):
+- Jadwal kegiatan PKL
+- Absensi/kehadiran
+- Laporan PKL
+- Aktivitas harian
+- Kalender kegiatan
+- Sistem penilaian
+- Monitoring real-time
+- Chat system kompleks
+- Kontak langsung dengan pembimbing
+
+==================================================
+Document Version: 1.2
+Last Updated: February 18, 2026
+Author: System Documentation

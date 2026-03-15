@@ -1,0 +1,159 @@
+================================================================================
+DESKRIPSI ACTIVITY DIAGRAM - SISTEM INFORMASI PKL (SIPKL)
+Sesuai aplikasi dan format penulisan
+================================================================================
+
+--------------------------------------------------------------------------------
+Gambar IV.2.5  Activity Diagram Tambah Data
+--------------------------------------------------------------------------------
+
+Diagram ini menggambarkan alur penambahan data (misalnya tambah data siswa) 
+oleh Admin/Hubin sebagai pengguna operasional sistem. Proses ini berfungsi 
+memastikan hanya data yang lengkap dan valid yang tersimpan ke basis data.
+
+Proses dimulai ketika Admin/Hubin membuka aplikasi SIPKL dan mengakses menu 
+Kelola Data Siswa lalu memilih fitur Tambah Siswa. Sistem menampilkan form 
+tambah data yang berisi kolom wajib seperti nama siswa, kelas, jenis kelamin, 
+NIS, NISN, username, email, dan password. Admin/Hubin mengisi form tersebut 
+lalu mengirimkan data. Sistem terlebih dahulu memeriksa kelengkapan input 
+untuk memastikan tidak ada kolom wajib yang kosong. Jika data belum lengkap, 
+sistem menampilkan pesan kesalahan validasi dan meminta Admin/Hubin 
+melengkapi isian. Jika lengkap, sistem memeriksa keunikan data (NIS, NISN, 
+username, email) dan duplikasi terhadap database. Apabila ditemukan data 
+yang sama, sistem menampilkan pesan kesalahan dan form tetap ditampilkan 
+untuk perbaikan. Apabila semua validasi lolos, sistem membuat akun pengguna 
+(user) lalu menyimpan data siswa ke database, menampilkan notifikasi sukses, 
+dan mengarahkan Admin/Hubin kembali ke daftar siswa atau dashboard sesuai 
+hak aksesnya.
+
+
+--------------------------------------------------------------------------------
+Gambar IV.2.2.9  Activity Diagram Pengajuan PKL
+--------------------------------------------------------------------------------
+
+Diagram ini menjelaskan proses pengajuan PKL (Praktik Kerja Lapangan) yang 
+dilakukan oleh siswa ketika akan melaksanakan PKL di DUDI. Proses ini 
+bertujuan mencatat pengajuan secara resmi dan mengelola status hingga 
+disetujui serta penempatan dan notifikasi.
+
+Siswa membuka menu buat pengajuan PKL kemudian sistem menampilkan form input 
+pengajuan. Siswa mengisi data (pilih DUDI, periode, tanggal, dan data 
+lainnya), mengunggah berkas pendukung, lalu menekan tombol kirim. Sistem 
+melakukan validasi data dan menyimpannya ke database dengan status menunggu 
+verifikasi. Sistem menampilkan proses menunggu verifikasi. Apabila pengajuan 
+tidak disetujui, siswa dapat mengajukan ulang dengan kembali mengisi data 
+dan mengirimkan kembali. Apabila pengajuan disetujui, sistem mengubah status 
+menjadi diterima, menempatkan PKL dan ID card untuk siswa, serta mengirim 
+notifikasi ke siswa. Riwayat dan status pengajuan dapat dipantau siswa 
+melalui menu pengajuan sehingga siswa mengetahui permohonan yang telah 
+dikirimkan dan keputusannya.
+
+
+--------------------------------------------------------------------------------
+Activity Diagram Assign Pembimbing
+--------------------------------------------------------------------------------
+
+Diagram ini menjelaskan proses penugasan guru pembimbing kepada siswa yang telah 
+disetujui pengajuan PKL-nya. Proses ini bertujuan mengelola penempatan siswa 
+ke pembimbing yang sesuai untuk memastikan pembimbingan PKL berjalan efektif.
+
+Admin/Hubin membuka menu assign pembimbing kemudian sistem menampilkan daftar 
+siswa yang telah disetujui pengajuan PKL-nya. Admin/Hubin memilih siswa yang 
+akan diassign pembimbing lalu menekan tombol assign. Sistem menampilkan form 
+assign pembimbing yang berisi daftar pembimbing yang tersedia. Admin/Hubin 
+memilih pembimbing yang sesuai dari form tersebut. Sistem melakukan validasi 
+terhadap data yang dipilih. Apabila validasi tidak berhasil, Admin/Hubin dapat 
+melakukan un-assign dan kembali ke langkah memilih siswa atau menampilkan form 
+assign pembimbing untuk perbaikan. Apabila validasi berhasil, sistem menyimpan 
+data assign pembimbing ke database, menampilkan notifikasi berhasil, dan 
+memperbarui status siswa. Dengan demikian, siswa yang telah diassign pembimbing 
+akan dapat melihat informasi pembimbingnya di dashboard.
+
+
+--------------------------------------------------------------------------------
+Activity Diagram Cetak ID Card/Biodata
+--------------------------------------------------------------------------------
+
+Diagram ini menjelaskan proses pencetakan ID card atau biodata siswa dalam 
+format digital (PDF/PNG). Proses ini bertujuan menghasilkan dokumen identitas 
+resmi siswa PKL yang dapat dicetak atau disimpan sebagai file digital.
+
+Admin/Hubin atau pengguna yang berwenang membuka menu data siswa kemudian 
+sistem menampilkan daftar siswa. Pengguna melihat detail siswa yang ingin 
+dicetak ID card atau biodatanya lalu memilih opsi cetak ID card/biodata. 
+Sistem menampilkan preview ID card/biodata yang akan dicetak. Pengguna 
+mengatur pengaturan cetak sesuai kebutuhan (ukuran, orientasi, dll). Setelah 
+pengaturan selesai, pengguna memiliki dua pilihan. Apabila pengguna memilih 
+konfirmasi cetak, sistem menghasilkan file cetak dalam format PDF atau PNG, 
+menampilkan notifikasi berhasil cetak, dan mengkonfirmasi bahwa cetak ID 
+card/biodata berhasil. Apabila pengguna memilih membatalkan cetak, proses 
+dihentikan dan pengguna kembali ke halaman sebelumnya tanpa menghasilkan file.
+
+
+--------------------------------------------------------------------------------
+Activity Diagram Verifikasi Pengajuan
+--------------------------------------------------------------------------------
+
+Diagram ini menjelaskan proses verifikasi dan persetujuan pengajuan PKL yang 
+dilakukan oleh Admin/Hubin terhadap pengajuan yang dikirimkan siswa. Proses 
+ini bertujuan memastikan hanya pengajuan yang memenuhi syarat yang disetujui 
+dan mengelola penempatan serta notifikasi kepada siswa.
+
+Admin/Hubin membuka menu pengajuan PKL kemudian sistem menampilkan daftar 
+pengajuan yang menunggu verifikasi. Admin/Hubin memilih pengajuan yang akan 
+diverifikasi lalu menekan tombol detail pengajuan. Sistem menampilkan detail 
+pengajuan dan informasi penempatan PKL secara lengkap. Berdasarkan informasi 
+yang ditampilkan, Admin/Hubin menentukan keputusan apakah pengajuan akan 
+disetujui atau ditolak. Sistem melakukan pengecekan terhadap keputusan yang 
+diambil. Apabila pengajuan disetujui, sistem mengubah status menjadi diterima, 
+menempatkan PKL untuk siswa tersebut, dan mengirim notifikasi ke siswa 
+menginformasikan bahwa pengajuan telah disetujui. Apabila pengajuan ditolak, 
+sistem mengubah status menjadi ditolak dan mengirim notifikasi ke siswa 
+menginformasikan bahwa pengajuan tidak dapat disetujui beserta alasan jika ada. 
+Dengan demikian, siswa dapat mengetahui status pengajuan mereka melalui 
+notifikasi yang diterima.
+
+
+--------------------------------------------------------------------------------
+Activity Diagram Login (alternatif untuk diagram autentikasi)
+--------------------------------------------------------------------------------
+
+Diagram ini menggambarkan alur autentikasi untuk peran Admin/Hubin atau Siswa 
+sebagai pengguna sistem. Proses ini berfungsi membatasi akses agar hanya 
+pengguna terdaftar yang dapat masuk ke fitur SIPKL sesuai perannya.
+
+Proses dimulai ketika pengguna membuka aplikasi SIPKL dan sistem menampilkan 
+halaman login (login Admin/Hubin atau login Siswa sesuai tautan yang dipilih). 
+Pengguna kemudian mengisi username dan password pada form autentikasi yang 
+tersedia. Sistem terlebih dahulu memeriksa kelengkapan input untuk memastikan 
+tidak ada kolom yang kosong. Jika data belum lengkap, sistem menampilkan 
+pesan kesalahan dan meminta pengguna melengkapi isian. Jika lengkap, sistem 
+mencocokkan data dengan database untuk memastikan keabsahan akun. Apabila 
+kredensial valid, sistem membuat session login dan mengarahkan pengguna ke 
+dashboard sesuai hak aksesnya—Admin/Hubin ke dashboard hubin, Siswa ke 
+dashboard siswa. Apabila kredensial tidak valid, sistem menampilkan pesan 
+kesalahan (misalnya "Username atau Password salah") dan form login tetap 
+ditampilkan.
+
+================================================================================
+KESIMPULAN ACTIVITY DIAGRAM
+================================================================================
+
+Berdasarkan keseluruhan diagram activity yang telah disusun, seluruh proses 
+utama pada Sistem Informasi PKL (SIPKL) berhasil dimodelkan secara terstruktur 
+mulai dari autentikasi, pengelolaan data (siswa, DUDI, pembimbing), pengajuan 
+PKL oleh siswa, verifikasi dan persetujuan pengajuan oleh Admin/Hubin, penugasan 
+pembimbing kepada siswa, hingga pencetakan ID card dan biodata. Setiap diagram 
+menunjukkan interaksi antara pengguna (Admin/Hubin atau Siswa) dan sistem secara 
+jelas melalui pembagian peran dalam swimlane. Pemodelan ini membantu memahami 
+alur kerja operasional sebelum sistem diimplementasikan sehingga meminimalkan 
+kesalahan logika proses. Dengan demikian, diagram activity menjadi dasar penting 
+dalam memastikan sistem SIPKL berjalan efektif, terkontrol, dan sesuai kebutuhan 
+pengguna untuk mengelola proses Praktik Kerja Lapangan (PKL) secara terintegrasi 
+dan sistematis.
+
+
+================================================================================
+Document Version: 1.0
+Last Updated: February 2026
+================================================================================

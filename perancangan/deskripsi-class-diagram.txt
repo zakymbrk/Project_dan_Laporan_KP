@@ -1,0 +1,97 @@
+================================================================================
+DESKRIPSI CLASS DIAGRAM - SISTEM INFORMASI PKL (SIPKL)
+Sesuai aplikasi dan format penulisan
+================================================================================
+
+3) Class Diagram
+
+Class diagram digunakan untuk memodelkan struktur statis Sistem Informasi PKL 
+(SIPKL) yang dibangun, khususnya dalam menggambarkan entitas data, atribut 
+yang dimiliki, serta hubungan antar entitas yang saling berinteraksi. Diagram 
+ini berfungsi sebagai representasi konseptual dari basis data sekaligus logika 
+objek sistem, sehingga dapat menunjukkan bagaimana informasi disimpan, dikelola, 
+dan saling terhubung untuk mendukung proses bisnis PKL. Dengan adanya class 
+diagram, rancangan sistem menjadi lebih terstruktur karena setiap data memiliki 
+peran dan keterkaitan yang jelas sebelum diimplementasikan ke dalam basis data 
+dan kode program.
+
+
+Gambar IV.2.2.12  Class Diagram Sistem Pendataan PKL
+
+
+Berdasarkan diagram yang ditampilkan, Sistem Informasi PKL terdiri dari 
+beberapa kelas utama yang saling terintegrasi, yaitu kelas Group, User, Siswa, 
+DUDI, Pembimbing, Pengelompokan, serta Pengumuman. Kelas User berperan sebagai 
+pusat identitas aktor sistem karena menyimpan informasi akun seperti nama 
+lengkap, username, password, email, telepon, alamat, serta status aktif. Setiap 
+pengguna dikaitkan dengan satu Group tertentu melalui atribut level sehingga 
+hak akses dan aktivitasnya dapat dibatasi sesuai peran. Pembagian peran seperti 
+Admin/Hubin dan Siswa memungkinkan sistem menerapkan kontrol akses yang berbeda 
+pada setiap jenis pengguna.
+
+Kelas Group berfungsi menyimpan data peran (role) pengguna dalam sistem, 
+misalnya kelompok Hubin dan kelompok Siswa. Informasi ini digunakan oleh kelas 
+User untuk menentukan dashboard serta fitur mana yang dapat diakses setelah 
+login. Dengan adanya Group, sistem dapat menerapkan otorisasi berbasis peran 
+secara konsisten sehingga proses operasional PKL menjadi terkontrol dan sesuai 
+aturan.
+
+Kelas Siswa berperan menyimpan data peserta PKL yang meliputi nama, NIS, NISN, 
+kelas, jurusan, status pengajuan, periode, tanggal mulai dan selesai, serta 
+berkas-berkas pengajuan seperti surat permohonan dan surat balasan. Setiap 
+siswa dikaitkan dengan satu User (akun login) melalui user_id serta dengan satu 
+DUDI (tempat PKL) melalui dudi_id. Siswa juga dapat dikaitkan dengan Pembimbing 
+melalui kelas Pengelompokan. Atribut status_pengajuan (draft, menunggu, 
+disetujui, ditolak) menunjukkan tahapan verifikasi pengajuan PKL oleh 
+Admin/Hubin. Struktur ini memastikan bahwa data siswa dapat ditelusuri lengkap 
+mulai dari akun, penempatan DUDI, hingga pembimbing yang ditugaskan.
+
+Kelas DUDI (Dunia Usaha/Dunia Industri) berfungsi menyimpan data tempat 
+praktik kerja lapangan, meliputi nama, alamat, telepon, email, PIC, instruktur, 
+serta status kemitraan. Informasi DUDI digunakan oleh siswa saat mengajukan 
+PKL dan oleh sistem untuk menampilkan daftar tempat yang dapat dipilih. 
+Hubungan satu DUDI dengan banyak Siswa menunjukkan bahwa satu tempat dapat 
+menampung beberapa peserta PKL. Dengan demikian, sistem dapat mengelola 
+penempatan siswa ke berbagai DUDI secara terpusat.
+
+Kelas Pembimbing menyimpan data guru pembimbing yang bertugas membimbing siswa 
+selama PKL, meliputi nama, NIP, telepon, email, alamat, jabatan, serta data 
+lainnya. Hubungan antara Pembimbing dan Siswa tidak langsung, tetapi melalui 
+kelas Pengelompokan. Kelas Pengelompokan berperan sebagai tabel penghubung 
+(assign) antara siswa dan pembimbing; setiap record-nya menyimpan pasangan 
+pembimbing_id dan siswa_id beserta timestamp. Dengan struktur ini, Admin/Hubin 
+dapat menugaskan satu pembimbing ke banyak siswa atau mengelola perubahan 
+penugasan tanpa mengubah data master siswa maupun pembimbing.
+
+Selain data operasional, sistem menyediakan mekanisme informasi melalui kelas 
+Pengumuman. Kelas ini menyimpan data pengumuman yang dipublikasikan Admin/Hubin 
+kepada siswa, meliputi judul, isi, serta status aktif. Hubungan 
+Pengumuman dengan User (melalui created_by) memungkinkan sistem mencatat 
+pembuat pengumuman dan membatasi fitur buat/edit/hapus hanya untuk Admin/Hubin. 
+Siswa dapat melihat pengumuman yang aktif di dashboard sehingga informasi 
+kegiatan PKL tersampaikan secara terpusat dan terdokumentasi.
+
+Secara keseluruhan, relasi antar kelas pada diagram membentuk alur data yang 
+konsisten mulai dari identitas pengguna (Group–User), data peserta dan 
+penempatan (User–Siswa–DUDI), penugasan pembimbing (Siswa–Pengelompokan–
+Pembimbing), hingga penyebaran informasi (User–Pengumuman). Keterhubungan 
+tersebut mencerminkan bahwa setiap proses bisnis pada Sistem Informasi PKL 
+didukung oleh struktur data yang saling terintegrasi, sehingga meminimalkan 
+duplikasi data dan meningkatkan integritas informasi.
+
+Dengan adanya class diagram ini, rancangan struktur data Sistem Informasi PKL 
+menjadi lebih jelas dan terorganisasi, karena setiap entitas memiliki tanggung 
+jawab serta relasi yang terdefinisi dengan baik. Pemodelan ini menjadi dasar 
+penting dalam proses implementasi basis data dan pengembangan aplikasi, 
+sehingga sistem dapat berjalan secara konsisten, efisien, dan sesuai dengan 
+kebutuhan operasional pengelolaan PKL. Oleh karena itu, class diagram 
+berperan sebagai fondasi utama dalam memastikan bahwa keseluruhan fungsi 
+SIPKL—mulai dari pengelolaan data siswa, DUDI, pembimbing, pengajuan dan 
+verifikasi PKL, hingga pengumuman—dapat direalisasikan melalui struktur data 
+yang tepat dan saling terhubung.
+
+
+================================================================================
+Document Version: 1.0
+Last Updated: February 2026
+================================================================================
